@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software or research artifacts, please cite this repository."
+title: "AI-Powered Financial Market Prediction and Risk Analysis System"
+authors:
+  - family-names: Ali
+    given-names: Mustaf
+    affiliation: "Independent researcher"
+version: 2.2.7
+date-released: 2026-11-14
+license: MIT
+repository-code: "https://github.com/mustaf2007/financial-market-prediction-risk-analysis"
