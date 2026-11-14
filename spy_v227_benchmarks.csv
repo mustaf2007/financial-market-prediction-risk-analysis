@@ -1,0 +1,3 @@
+benchmark,total_return_pct,cagr_pct,annualized_volatility_pct,daily_var_95_pct,daily_cvar_95_pct,maximum_drawdown_pct,sharpe_zero_rf,sortino_zero_target,calmar_ratio
+Always_Invested_Same_Execution_Window,13.9519,8.4878,14.5251,-1.1252,-1.8091,-7.9643,0.6318,1.0492,1.0657
+Cash,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
