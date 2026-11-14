@@ -1,0 +1,6 @@
+feature_group,feature_count,valid_folds,mean_validation_auc,std_validation_auc,features
+PRICE_ACTION,6,5,0.5085,0.0414,Return_1D;Return_5D;Return_10D;Return_21D;High_Low_Range;ATR_Pct
+VOLATILITY,4,5,0.5308,0.0336,Volatility_10D;Volatility_21D;ATR_Pct;Regime_HighVol
+MOMENTUM,8,5,0.4859,0.0272,Return_5D;Return_10D;Return_21D;RSI_14;MACD;MACD_Signal;MACD_Hist;BB_Position
+TREND,4,5,0.4866,0.0193,SMA_Ratio_20;SMA_Ratio_50;SMA_Ratio_200;Regime_Trend
+VOLUME,2,5,0.5246,0.0403,Volume_Change;Volume_Ratio_20
