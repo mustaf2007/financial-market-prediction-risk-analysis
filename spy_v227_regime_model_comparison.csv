@@ -1,0 +1,5 @@
+regime,valid_folds,validation_observations,mean_validation_auc,std_validation_auc,interpretation
+BULLISH,5,884,0.5098,0.0221,Exploratory only; compare with global model and outer holdout
+BEARISH,0,0,,,Insufficient regime-specific validation data
+SIDEWAYS,0,0,,,Insufficient regime-specific validation data
+HIGH_VOLATILITY,4,456,0.5335,0.014,Exploratory only; compare with global model and outer holdout
