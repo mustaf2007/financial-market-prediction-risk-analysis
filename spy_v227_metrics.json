@@ -1,0 +1,130 @@
+{
+  "version": "2.2.7",
+  "release_status": "FINAL_PLANNED_DEVELOPMENT_RELEASE",
+  "project_policy": "After V2.2.7, proceed to testing, acceptance, documentation and freeze. Do not create another version unless a material defect is confirmed.",
+  "run_timestamp_utc": "2026-11-12T13:54:22.142831+00:00",
+  "validation_design": {
+    "model_selection": "Earlier 70% of finite chronological out-of-fold predictions",
+    "threshold_selection": "Later 30% of finite chronological out-of-fold predictions",
+    "final_holdout_used_for_selection": false,
+    "purge_rows": 1,
+    "note": "This is a chronological holdout design, not a fully nested outer walk-forward estimate. Threshold selection can still be optimistic."
+  },
+  "ticker": "SPY",
+  "strategy": "intraday",
+  "synthetic_data": false,
+  "selected_model": "XGBoost",
+  "walk_forward_model_scores": {
+    "mean_fold_auc": {
+      "LogisticRegression": 0.4799398444151105,
+      "RandomForest": 0.5109024152035546,
+      "HistGradientBoosting": 0.4969058506133721,
+      "XGBoost": 0.5287499017945867
+    },
+    "selection_period_auc": {
+      "LogisticRegression": 0.49467046890610633,
+      "RandomForest": 0.5127465445715533,
+      "HistGradientBoosting": 0.486598429260482,
+      "XGBoost": 0.513977199796214
+    }
+  },
+  "regime_diagnostics_file": "spy_v227_regime_diagnostics.csv",
+  "regime_model_comparison_file": "spy_v227_regime_model_comparison.csv",
+  "feature_group_experiments_file": "spy_v227_feature_group_experiments.csv",
+  "research_note": "Regime-specific and feature-group results are exploratory diagnostics; they do not select the deployed model or establish profitability.",
+  "holdout_target_up_rate_pct": 51.2376,
+  "decision": "CASH_NO_TRADE",
+  "selected_threshold": null,
+  "prediction_reporting_threshold": 0.5,
+  "threshold_rule": "Model is selected using the earlier 70% of finite chronological OOF predictions. Threshold is selected on the later 30%; requires exposure >= 10%, at least 20 active observations, positive net return and positive Sharpe; otherwise cash. This separation reduces, but does not eliminate, selection bias.",
+  "prediction_metrics": {
+    "accuracy_pct": 50.7426,
+    "balanced_accuracy_pct": 49.5782,
+    "precision_up_pct": 51.0204,
+    "recall_up_pct": 96.6184,
+    "f1_up": 0.6678,
+    "roc_auc": 0.5054,
+    "brier_score": 0.25084,
+    "confusion_matrix": [
+      [
+        5,
+        192
+      ],
+      [
+        7,
+        200
+      ]
+    ],
+    "actual_up_rate_pct": 51.2376,
+    "majority_class_baseline_accuracy_pct": 51.2376,
+    "predicted_up_rate_pct": 97.0297,
+    "base_rate_brier_reference": 0.249847,
+    "brier_skill_score_vs_base_rate": -0.003984
+  },
+  "strategy_risk_metrics": {
+    "total_return_pct": 0.0,
+    "cagr_pct": 0.0,
+    "annualized_volatility_pct": 0.0,
+    "daily_var_95_pct": 0.0,
+    "daily_cvar_95_pct": 0.0,
+    "maximum_drawdown_pct": 0.0,
+    "sharpe_zero_rf": 0.0,
+    "sortino_zero_target": 0.0,
+    "calmar_ratio": null
+  },
+  "same_execution_window_market_metrics": {
+    "total_return_pct": 13.9519,
+    "cagr_pct": 8.4878,
+    "annualized_volatility_pct": 14.5251,
+    "daily_var_95_pct": -1.1252,
+    "daily_cvar_95_pct": -1.8091,
+    "maximum_drawdown_pct": -7.9643,
+    "sharpe_zero_rf": 0.6318,
+    "sortino_zero_target": 1.0492,
+    "calmar_ratio": 1.0657
+  },
+  "trade_statistics": {
+    "trade_count": 0
+  },
+  "trading_metrics": {
+    "market_exposure_pct": 0.0,
+    "average_position_pct": 0.0,
+    "active_trades": 0,
+    "round_trip_cost_bps": 10.0,
+    "cost_per_side_bps": 5.0
+  },
+  "probability_diagnostics": {
+    "probability_mean": 0.541377,
+    "probability_std": 0.021088,
+    "probability_min": 0.467101,
+    "probability_max": 0.596558,
+    "probability_above_threshold_pct": 0.0
+  },
+  "periods": {
+    "training_start": "2018-10-16",
+    "training_end": "2025-03-20",
+    "signal_test_start": "2025-03-24",
+    "signal_test_end": "2026-10-29",
+    "execution_start": "2025-03-25",
+    "execution_end": "2026-10-30"
+  },
+  "configuration": {
+    "ticker": "SPY",
+    "start": "2018-01-01",
+    "end": "2026-11-01",
+    "test_size": 0.2,
+    "cost_bps_per_side": 5.0,
+    "annualization": 252,
+    "random_state": 42,
+    "output_dir": "results_v227",
+    "strategy": "intraday",
+    "min_train": 500,
+    "n_splits": 5,
+    "min_exposure": 0.1,
+    "target_volatility": 0.15,
+    "max_position": 1.0,
+    "calibration_fraction": 0.2,
+    "min_calibration_rows": 60,
+    "min_active_trades": 20
+  }
+}
